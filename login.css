@@ -1,0 +1,81 @@
+body{
+    background-color: #f0f0f0;
+    height: 100vh;
+    overflow: hidden;
+}
+.loginContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginLeft{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 530px;
+    border: 2px solid gray;
+    padding: 0 20px;
+    justify-content: center;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.loginText{
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.loginText::after{
+    content: '';
+    width: 70px;
+    height: 4px;
+    background-color: orange;
+    
+}
+.loginLeft input{
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 15px;
+    height: 50px;
+    border:none;
+}
+.loginLeft .loginbtn{
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    margin-bottom: 10px;
+}
+.changebtn{
+    background-color:#f0f0f0;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    color:orange;
+    border: 2px solid orange;
+    margin-bottom: 10px;
+}
+
+.backbtn{
+    width: 100px;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#signupform{
+    display: none;
+}

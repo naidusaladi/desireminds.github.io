@@ -1,0 +1,816 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* ============================= navbar start ==============================*/
+
+.logo{
+    width: 150px;
+    height: 90%;
+}
+@media (max-width:420px) {
+    .logo{
+        width: 180px;
+    }
+    
+}
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    
+
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+nav li{
+    height: 70px;
+    
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:rgba(255,255,255,0.1);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none;
+    
+    
+
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+@media (max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+.joinbtn{
+    width: 180px;
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    border:2px solid orange;
+    margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+.trailbtn{
+    color: white;
+    width: 180px;
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+@media (max-width:480px) {
+    .joinbtn,
+    .trailbtn{
+        font-size: 10px;
+
+    }
+}
+@media (max-width:420px) {
+    .joinbtn,
+    .trailbtn{
+        font-size: 6px;
+
+    }
+}
+
+.joinbtn a{
+    color:orange;
+}
+.trailbtn a{
+    color:white;
+}
+.joinbtn a:hover{
+    background-color: transparent;
+}
+
+.trailbtn a:hover{
+    background-color:transparent
+}
+
+@media (max-width:500px) {
+    .hideOnSome{
+        display: none;
+    }
+}
+
+.showAfter{
+    
+    margin-bottom: 4px;
+    border-radius: 20px;
+   
+    text-align: center;
+    font-weight: 700;
+    display: none;
+}
+.showAfter a{
+    color:white;
+    background-color:orange ;
+    border-radius: 10px;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    width: 50%;
+    
+    
+}
+
+li svg{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:500px) {
+    .showAfter{
+      display: block;
+
+        
+    }
+}
+
+/* ============================= navbar end ==============================*/
+
+/* ============================= Home start ==============================*/
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 20px;
+    /* padding-top: 100px; */
+    align-items: center;
+
+    padding-bottom: 0px;
+    width: 90%;
+}
+
+.homeTitle{
+    max-width: 80%;
+   
+    font-weight: 800;
+    font-size: 40px;
+}
+@media (max-width:648px) {
+    .homeTitle{
+        max-width: 100%;
+       
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+}
+@media (max-width:450px) {
+    .homeTitle{
+
+        font-size: 25px;
+    }
+    
+}
+.homeRight{
+    max-width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 10px;
+}
+.homeImg{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:768px) {
+    .homeRight{
+        display: none;
+    }
+    .homeLeft{
+        background-image: url(mobbg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        isolation: isolate;
+    }
+    .homeLeft::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset:0;
+        background:white;
+        opacity: .4;
+        
+    }
+}
+
+.calendarContainer{
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    
+   
+}
+
+.calendar{
+   
+   height: 350px;
+   padding: 5px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.calendarTitle{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+@media (max-width:768px) {
+    .calendarTitle{
+        font-weight: 800;
+    }
+}
+
+.col{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+   
+
+}
+.day{
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 54px;
+    font-weight: 700;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+   
+
+}
+
+.day:hover{
+    background-color:orange;
+    transform: scale(1.05);
+}
+
+@media (max-width:400px) {
+    h1{
+        width: 100%;
+        font-size: 25px;
+
+    }
+
+    .day{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+/* ===============================================Home End=============================== */
+
+
+/* ===============================================Course Start=============================== */
+
+
+.courses{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width:600px) {
+    .courses{
+        justify-content: center;
+     
+    }
+}
+.coursesTitle{
+
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.coursesTitle::after{
+    content: '';
+    height: 3px;
+    width: 60px;
+    background-color:rgb(0, 255, 255);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+}
+.course{
+    width: 275px;
+    height: 350px;
+    border: 2px solid black;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    transition: all 0.5s;
+
+   
+
+}
+.course:hover{
+    transform: scale(1.05);
+}
+.courseName{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.coursebtn{
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.coursebuy{
+    border: 2px solid orange;
+    color: orange;
+}
+.couresetrail{
+    background-color: orange;
+    color: white;
+    border:2px solid orange;
+}
+
+.c1{
+    background-image: url(handcraft-creative-workshop-handmade-hobby-creative-work-art-hands-create-crafts-making-decorative-craftwork-art-crafts-class-vector-banner-children_87946-3959.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position-y: -30px;
+}
+.c2{
+    background-image: url(1698824398543.jpg);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-y: -10px;
+}
+.c3{
+    background-image: url(man-meditating-concept_23-2148508453.jpg);
+    background-position: center;
+    background-size:cover;
+    background-position-y: -30px;
+    
+
+}
+.c4{
+    background-image: url(music.jpg);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+.c5{
+    background-image: url(female-character-is-watching-online-dance-class-vector-35483933.jpg);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+/* ============================= Course End ======================================= */
+
+/* ======== Private Batch vs Solo Class start======================================= */
+.tbText{
+    text-align: center;
+    font-weight: 900;
+    font-size: 45px;
+    margin: 20px 0;
+}
+.tbTopContainer{
+    margin:100px 0;
+}
+@media (max-width:768px) {
+    .tbText{
+
+        font-size: 25px;
+       
+    } 
+    .tbTopContainer{
+        margin:20px 0;
+    }
+}
+.tbContainer{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    
+    margin-bottom: 100px;
+    border:2px solid black;
+    width: 90%;
+    margin: auto;
+
+}
+
+
+.tbrow{
+    height: 100px;
+   
+    text-align: center;
+}
+.r1{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+@media (max-width:768px) {
+    .r1{
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .tbrow b{
+        font-size: 12px;
+    }
+    .tbContainer{
+        width: 99%;
+    }
+}
+
+
+
+
+/* ========= Private Batch vs Solo Class end======================================= */
+
+/* ============================= About Start ======================================= */
+.aboutContainer{
+    margin: 100px 20px;
+}
+.aboutText{
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutText::after{
+    content: '';
+    height: 3px;
+    width: 60px;
+    background-color:rgb(0, 255, 255);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+}
+.about{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+  
+    
+}
+.aboutLeft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+.aboutRight{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+.aboutImg{
+    width:90%;
+}
+.aboutLeft h2{
+    padding: 10px 0;
+}
+.aboutLeft p{
+    color:rgb(102, 99, 99);
+}
+@media (max-width: 767px) {
+    .aboutRight{
+        display: none;
+    }
+    .aboutContainer{
+        margin: 10px 0px;
+    }
+    .aboutLeft{
+        width: 100%;
+        background-image:url(1698822964622.jpg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        isolation: isolate;
+        padding: 0 10px;
+
+    }
+
+    .aboutLeft::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset:0;
+        background:white;
+        opacity: .7;
+        
+    }
+    .aboutLeft p{
+        color:black;
+        font-weight: 600;
+    }
+    
+
+}
+
+
+
+/* ============================= About End ======================================= */
+
+/* ============================= Team Start ======================================= */
+.teamTitle{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+.teamTitle::after{
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: rgb(0, 255, 255);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+}
+.team{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+.teamPerson{
+    width: 279px;
+    height: 340px;
+    background-color:#f0f0f0;
+    margin: 10px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+   
+    
+}
+
+.teamPerson img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+    border-radius: 50%;
+}
+
+.personName{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* ============================= Team  End ======================================= */
+
+
+/* ============================= Conatact Us start ============================== */
+
+.contactContainer{
+    margin-top: 80px;
+}
+.contactText{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+.contactText::after{
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: rgb(0, 255, 255);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.contactLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+@media (max-width:768px) {
+    .contactLeft{
+        align-items: center;
+    }
+}
+.contactLeft div{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contactLeft div svg{
+    margin-right: 10px;
+}
+@media (max-width: 768px) {
+    .contact{
+        flex-direction: column-reverse;
+    }
+    .contactRight img{
+        width: 90%;
+    }
+}
+/* ============================= Conatact Us End ============================== */
+
+
+/* ============================= Feedback Form start ============================== */
+
+.feedbackContainer{
+    margin-top: 80px;
+    min-height: 50vh;
+}
+.feedbackText{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+.feedbackText::after{
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: rgb(0, 255, 255);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+}
+.feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin:0 auto;
+}
+.feedback input{
+    width: 270px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.feedback textarea{
+   
+    width: 77%;
+}
+.feedbackbtn{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    font-weight: 600;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+@media (max-width:768px) {
+    .feedback{
+        width: 100%;
+    }
+
+    .feedback textarea{
+        width: 90%;
+    }
+}
+
+
+/* ============================= Feedback Form end ============================== */
+
+
+/* ============================= Footer Start============================== */
+
+.footerContainer{
+    background-color: black;
+    color:white;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:20px 0;
+    font-size: 14px;
+}
+
+@media (max-width:768px) {
+    .footerContainer{
+        flex-direction: column;
+    }
+}
+/* ============================= Footer end ============================== */
+
